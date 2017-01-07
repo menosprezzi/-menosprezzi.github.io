@@ -28,7 +28,7 @@
 }
 
 .header-paralax {
-    background-image: url('../res/wallpaper.jpg');
+    background-image: url('../res/img/wallpaper.jpg');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
