@@ -1,13 +1,15 @@
 (function(){
-    $(window).on('scroll', function (ev) {
-        var percentage = (window.scrollY * 100) / window.innerHeight;
-        if(percentage - Math.trunc(percentage) > 0.3) {
-            ev.preventDefault();
-            return;
-        }
-        $('.header').css('transition', 'opacity 0.25s ease-in');
-        $('.header').css('opacity', (100 - percentage)/100);
-    });
+    // $(window).on('scroll', function (ev) {
+    //     var percentage = (window.scrollY * 100) / window.innerHeight;
+    //     if(percentage - Math.trunc(percentage) > 0.3) {
+    //         ev.preventDefault();
+    //         return;
+    //     }
+    //     $('.header').css('transition', 'opacity 0.25s ease-in');
+    //     $('.header').css('opacity', (100 - percentage)/100);
+    // });
+
+
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -22,4 +24,6 @@
             }
         });
     });
+
+
 })();

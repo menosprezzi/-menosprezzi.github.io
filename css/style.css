@@ -160,6 +160,11 @@ blockquote {
     transform: scale(0.9);
     color: white !important;
 }
+canvas#screen {
+    position: absolute;
+    margin-top: -30px;
+    opacity: 0.5;
+}
 
 /** FIXES **/
 .carousel-inner {
