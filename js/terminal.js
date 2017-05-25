@@ -5,7 +5,7 @@
     $.fn.terminal = function (opt) {
         var elt = this;
         var text = elt.text();
-        elt.html(opt.path + ' ' + opt.command + '<br><div></div>');
+        elt.html(opt.header.replace('{{archive}}', $(this).attr('data-archive')) + '<br><div></div>');
         var content = elt.find('div');
         for (var i = 0; i < text.length; i++) {
             setTimeout(function () {
@@ -21,8 +21,10 @@
 
     $.directives.push(function terminal() {
         $('.terminal').terminal({
-            path: '<span style="background:darkgrey;color:black;display:block;">&nbsp; GNU nano 2.7.4 &nbsp;&nbsp;&nbsp; Arquivo: ./about.txt</span>',
-            command: ''
+            header:
+            '<span style="background:darkgrey;color:black;display:block;">' +
+                '&nbsp; GNU nano 2.7.4 &nbsp;&nbsp;&nbsp; Arquivo: {{archive}}' +
+            '</span>'
         });
     });
 
