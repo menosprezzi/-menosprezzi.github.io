@@ -245,6 +245,8 @@ a[onclick] {
 
 .terminal {
     max-height: 100vh;
+    max-width: 512px;
+    margin: auto;
 }
 .terminal-wrapper {
     background-color: black;
