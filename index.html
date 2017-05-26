@@ -19,7 +19,7 @@
 
 <body>
     <div class="header full-height paralax wallpaper">
-        <div class="header-overlay">
+        <div>
             <nav class="row center-xs">
                 <div class="col-xs-10 row">
                     <div class="row middle-xs">
@@ -49,6 +49,35 @@
                     <h2>Mobile, UX, FullStack JavaScript</h2>
                 </div>
                 <div class="header-bottom">
+                    <a class="button outline white" id="button_descubra">Descubra o meu Trabalho</a>
+                    <a class="button-icon flat white animated infinite fadeInDown scroll-to" href="#about"><i class="icon ion-android-arrow-dropdown-circle"></i></a>
+                </div>
+            </div>
+            <small class="header-watermark">Foto: André Pilli</small>
+        </div>
+        <div class="black-clip-path-overlay">
+            <nav class="row center-xs">
+                <div class="col-xs-10 row">
+                    <div class="row middle-xs">
+                        <img class="rounded brand-logo hover-scalable" width="45" height="45" src="res/img/me.jpg">
+                        <div class="brand">Guilherme Prezzi</div>
+                    </div>
+                    <div class="col-xs row end-xs middle-xs show-sm">
+                        <a class="button flat black">Sobre</a>
+                        <a class="button flat black">Portfólio</a>
+                        <a class="button black hover-scalable"><i class="icon ion-social-github"></i> Github</a>
+                    </div>
+                    <div class="col-xs row end-xs middle-xs show-only-xs">
+                        <a class="button-icon flat white" id="menu_trigger"><i class="icon ion-navicon"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <div>
+                <div class="header-title">
+                    <h1>WEB DEVELOPER</h1>
+                    <h2>Mobile, UX, FullStack JavaScript</h2>
+                </div>
+                <div class="header-bottom">
                     <a class="button outline white">Descubra o meu Trabalho</a>
                     <a class="button-icon flat white animated infinite fadeInDown scroll-to" href="#about"><i class="icon ion-android-arrow-dropdown-circle"></i></a>
                 </div>
@@ -73,7 +102,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6 half-backline">
+            <div class="col-xs-12 col-md-6">
                 <div class="terminal-wrapper row middle-md">
                     <div class="terminal compile" data-archive="res/strings/about.txt">
                         {{strings.about}}
