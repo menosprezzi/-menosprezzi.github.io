@@ -161,6 +161,9 @@ a[onclick] {
 .black-clip-path-overlay .brand {
     color: white;
 }
+.black-clip-path-overlay .header-title h1:after {
+    border-color: white;
+}
 
 .header-title h1 {
     font-weight: 100;
@@ -171,6 +174,8 @@ a[onclick] {
 .header-title h1:after {
     content: ' ';
     margin-left: 5px;
+    border: 2px solid white;
+
     animation-name: cursor-light;
     animation-duration: 1.0s;
     animation-iteration-count: infinite;
@@ -182,8 +187,8 @@ a[onclick] {
     color: rgba(255,255,255, 0.5);
 }
 @keyframes cursor-light {
-    from {border: 2px solid white;}
-    to {border: 2px solid transparent;}
+    from {}
+    to {border-color: transparent;}
 }
 
 .brand-logo {
@@ -333,6 +338,9 @@ a[onclick] {
         color: black;
     }
     #button_descubra {
+        border-color: black;
+    }
+    .header-title h1:after {
         border-color: black;
     }
 }
