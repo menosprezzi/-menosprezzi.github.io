@@ -37,6 +37,10 @@ a[onclick] {
     background-color: #ef6c00;
     color: white;
 }
+.black {
+    background-color: black;
+    color: white;
+}
 .dark-grey {
     background-color: #263238;
     color: white;
@@ -51,6 +55,10 @@ a[onclick] {
 .flat.orange {
     background-color: transparent;
     color: #ef6c00;
+}
+.flat.black {
+    background-color: transparent;
+    color: black;
 }
 .flat.white {
     background-color: transparent;
@@ -89,6 +97,20 @@ a[onclick] {
 }
 
 /* ELEMENTS */
+.half-backline {
+    position: relative;
+}
+.half-backline:before {
+    background: black;
+    width: 100%;
+    height: 100vw;
+    top: -100vw;
+    left: -50vw;
+    transform: skew(45deg);
+    content: ' ';
+    position: absolute;
+    z-index: 0;
+}
 #menu_content a {
     display: block;
     text-align: center;
@@ -115,10 +137,16 @@ a[onclick] {
     }
 }
 
-
+.header-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 .header nav {
     padding: 15px 5px;
 }
+
 .header-bottom {
     text-align: center;
     color: white;
@@ -221,7 +249,7 @@ a[onclick] {
 
 /* CUSTOM */
 .wallpaper {
-    background-image: url(../res/img/wallpaper.jpg);
+    background-image: url(../res/img/wallpaper2.jpg);
 }
 .header-bottom a {
     display: block;

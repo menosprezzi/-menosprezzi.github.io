@@ -30,20 +30,5 @@
             }
         }
     };
-    
-        
-//    $.fn.compile = function (scope) {
-//        var element = this;
-//        var content;
-//        if (element.hasClass('jscompiled')) content = $.templatesCache[element[0].id];
-//        else {
-//            content = element.html();
-//            $.templatesCache[element[0].id] = content;
-//            element.addClass('jscompiled');
-//        }
-//        var a = Mustache.parse(content);
-//        console.log(a);
-//        var html = Mustache.render(content, scope);
-//        element.html(html);
-//    };
+
 })();

@@ -28,13 +28,6 @@
 
     function initData() {
         $.scope.strings = {};
-        $.get(server + '/res/strings/about.txt').then(
-            function success(res) {
-                $.scope.strings.about = res;
-            },
-            function error(err) {
-                console.log(err)
-            });
     }
 
     function initScreenAnimations() {
@@ -69,6 +62,16 @@
                     elt.addClass('animated slideInUp');
                 }, 2000);
             }
+        });
+
+        screen.on('enter', '#about', function (elt) {
+            $.get(server + '/res/strings/about.txt').then(
+                function success(res) {
+                    $.scope.strings.about = res;
+                },
+                function error(err) {
+                    console.log(err)
+                });
         });
     }
 
