@@ -1,0 +1,26 @@
+{
+  "name": "menosprezzi.github.io",
+  "version": "1.0.0",
+  "description": "Portfólio",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menosprezzi/menosprezzi.github.io.git"
+  },
+  "author": "Guilherme Prezzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menosprezzi/menosprezzi.github.io/issues"
+  },
+  "homepage": "https://github.com/menosprezzi/menosprezzi.github.io#readme",
+  "devDependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "live-server": "^1.2.0"
+  }
+}

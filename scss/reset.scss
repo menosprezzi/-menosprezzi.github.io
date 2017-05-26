@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+}
+section {
+  position: relative;
+  z-index: 0;
+}
+a[onclick] {
+  cursor: pointer;
+}
