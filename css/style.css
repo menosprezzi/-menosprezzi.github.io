@@ -175,7 +175,7 @@ a[onclick] {
 }
 .header-watermark {
     position: absolute;
-    right: 10px;
+    left: 10px;
     bottom: 10px;
     color: rgba(255,255,255, 0.5);
 }
