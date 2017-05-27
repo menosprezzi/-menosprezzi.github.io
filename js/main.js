@@ -8,11 +8,13 @@
             if(!this.isOpened) {
                 this.isOpened = true;
                 $('#header_content').hide();
+                $('.wallpaper').css('background-size', 'calc((100vw + 100vh) + 256px)');
                 $('#menu_content').show();
                 $('#menu_content a').css('animation-name', 'slideIn');
             } else {
                 this.isOpened = false;
                 $('#menu_content').hide();
+                $('.wallpaper').css('background-size', '');
                 $('#header_content').show();
             }
         }

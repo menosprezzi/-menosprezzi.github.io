@@ -25,6 +25,10 @@
   background-color: #ef6c00;
   color: white;
 }
+.glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
 .black {
   background-color: black;
   color: white;
@@ -66,6 +70,9 @@
   &.black {
     background-color: transparent;
     color: black;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1) !important;
+    }
   }
   &.white {
     background-color: transparent;
