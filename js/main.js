@@ -82,7 +82,8 @@
         initData();
         initHandlers();
 
-        if (css_browser_selector(navigator.userAgent).indexOf('ie') != -1) $('body').addClass('compatibility-mode');
+        if (navigator.userAgent.indexOf('Edge') != -1 || navigator.userAgent.indexOf('MSIE') != -1)
+            $('body').addClass('compatibility-mode');
     }
 
     main();
