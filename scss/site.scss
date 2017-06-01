@@ -4,6 +4,8 @@
   height: 100vh;
   position: absolute;
 
+  transition: opacity  0.5s ease-in;
+
   animation: fog infinite 100s linear;
 }
 

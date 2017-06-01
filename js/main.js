@@ -9,12 +9,14 @@
                 this.isOpened = true;
                 $('#header_content').hide();
                 $('.wallpaper').css('background-size', 'calc((100vw + 100vh) + 256px)');
+                $('.fog').css('opacity', '0');
                 $('#menu_content').show();
                 $('#menu_content a').css('animation-name', 'slideIn');
             } else {
                 this.isOpened = false;
                 $('#menu_content').hide();
                 $('.wallpaper').css('background-size', '');
+                $('.fog').css('opacity', '1');
                 $('#header_content').show();
             }
         }
