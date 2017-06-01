@@ -10,18 +10,16 @@
     <link rel="icon" type="image/x-icon" href="waiting">
     <meta name="theme-color" content="#000">
 
-    <link rel="stylesheet" href="css/flexboxgrid-pr.css">
+    <script src="js/browser-detection.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/modernizr-svgclippaths.js"></script>
 </head>
 
 <body>
     <div class="header full-height paralax wallpaper">
-        <div>
+        <div class="header-inner">
             <nav class="row center-xs">
                 <div class="col-xs-10 row">
                     <div class="row middle-xs">
@@ -34,10 +32,11 @@
                         <a class="button black hover-scalable"><i class="icon ion-social-github"></i> Github</a>
                     </div>
                     <div class="col-xs row end-xs middle-xs show-only-xs">
-                        <a class="button-icon flat white" id="menu_trigger"><i class="icon ion-navicon"></i></a>
+                        <a class="icon-button flat black" id="menu_trigger"><i class="icon ion-navicon"></i></a>
                     </div>
                 </div>
             </nav>
+
             <div class="fog"></div>
             <div id="menu_content" style="display: none">
                 <div class="col-xs">
@@ -52,43 +51,34 @@
                     <h2>Mobile, UX, FullStack JavaScript</h2>
                 </div>
                 <div class="header-bottom">
-                    <a class="button outline white" id="button_descubra">Descubra o meu Trabalho</a>
-                    <a class="button-icon flat white animated infinite fadeInDown scroll-to" href="#about"><i class="icon ion-android-arrow-dropdown-circle"></i></a>
+                    <a class="button outline black" id="button_descubra">Descubra o meu Trabalho</a>
+                    <a class="icon-button flat black animated infinite fadeInDown scroll-to" href="#about" id="icon_button_descubra"><i class="icon ion-android-arrow-dropdown-circle"></i></a>
                 </div>
             </div>
             <small class="header-watermark">Foto: André Pilli</small>
         </div>
         <div class="black-clip-path-overlay">
-            <nav class="row center-xs">
-                <div class="col-xs-10 row">
-                    <div class="row middle-xs">
-                        <img class="rounded brand-logo hover-scalable" width="45" height="45" src="res/img/me.jpg">
-                        <div class="brand">Guilherme Prezzi</div>
-                    </div>
-                    <div class="col-xs row end-xs middle-xs show-sm">
-                        <a class="button flat black">Sobre</a>
-                        <a class="button flat black">Portfólio</a>
-                        <a class="button black hover-scalable"><i class="icon ion-social-github"></i> Github</a>
-                    </div>
-                    <div class="col-xs row end-xs middle-xs show-only-xs">
-                        <a class="button-icon flat white" id="menu_trigger"><i class="icon ion-navicon"></i></a>
+            <div class="overlay-inner">
+                <div class="row center-xs">
+                    <div class="col-xs-10 row">
+                        <div class="row middle-xs">
+                            <img class="rounded brand-logo hover-scalable" width="45" height="45" src="res/img/me.jpg">
+                            <div class="brand">Guilherme Prezzi</div>
+                        </div>
                     </div>
                 </div>
-            </nav>
-            <div>
                 <div class="header-title">
                     <h1>WEB DEVELOPER</h1>
                     <h2>Mobile, UX, FullStack JavaScript</h2>
                 </div>
                 <div class="header-bottom">
                     <a class="button outline white">Descubra o meu Trabalho</a>
-                    <a class="button-icon flat white animated infinite fadeInDown scroll-to" href="#about"><i class="icon ion-android-arrow-dropdown-circle"></i></a>
+                    <a class="icon-button flat white animated infinite fadeInDown scroll-to" href="#about"><i class="icon ion-android-arrow-dropdown-circle"></i></a>
                 </div>
             </div>
-            <small class="header-watermark">Foto: André Pilli</small>
         </div>
     </div>
-    <section class="full-height limit-full-height paper" id="about">
+    <section class="full-height paper" id="about">
         <canvas id="lego-anm" class="background-canvas"></canvas>
         <div class="row no-gutter">
             <div class="col-md-6 col-xs-12">
@@ -114,6 +104,14 @@
             </div>
         </div>
     </section>
+
+    <svg width="0" height="0">
+        <defs>
+            <clipPath id="clip-shape" clipPathUnits="objectBoundingBox">
+                <polygon points="0 0, 0.5 0, 1 1, 0.5 1" />
+            </clipPath>
+        </defs>
+    </svg>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

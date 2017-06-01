@@ -5,6 +5,37 @@
   perspective: $perspective;
 }
 
+// Colors & Themes
+/////////////////////
+
+$theme-primary: black;
+$theme-secondary: white;
+
+$color-black: black;
+$color-white: white;
+$color-glass: rgba(255, 255, 255, 0.1);
+$color-dark-glass: rgba(0, 0, 0, 0.1);
+$color-paper: #fff8e1;
+$color-dark-grey: #263238;
+
+.glass {
+  background-color: $color-glass;
+  color: $color-white;
+}
+.black {
+  background-color: $color-black;
+  color: $color-white;
+}
+.dark-grey {
+  background-color: $color-dark-grey;
+  color: $color-white;
+}
+.paper {
+  background-color: $color-paper;
+  color: $color-dark-grey;
+}
+
+
 .icon-sm {
   width: 32px;
   margin: 0px 7px;
@@ -21,64 +52,44 @@
   display: block;
 }
 
-.orange {
-  background-color: #ef6c00;
-  color: white;
-}
-.glass {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-.black {
-  background-color: black;
-  color: white;
-}
-.dark-grey {
-  background-color: #263238;
-  color: white;
-}
-.paper {
-  background-color: #fff8e1;
-  color: #263238;
-}
 
-.button {
+
+.button, .icon-button {
   padding: 10px 20px;
   border-radius: 50px;
   margin: 2px 5px;
+
+  &.outline {
+    background: transparent;
+    &.white {
+      border: 2px solid $color-white;
+      color: $color-white;
+    }
+    &.black {
+      border: 2px solid $color-black;
+      color: $color-black;
+    }
+  }
+
+  &.flat {
+    &.black {
+      background-color: transparent;
+      color: $color-black;
+      &:hover {
+        background-color: $color-dark-glass !important;
+      }
+    }
+    &.white {
+      background-color: transparent;
+      color: $color-white;
+    }
+  }
 }
 
-.button-icon {
+.icon-button {
   font-size: 40px
 }
 
-.outline {
-  background: transparent;
-  &.white {
-    border: 2px solid white;
-  }
-  &.black {
-    border: 2px solid black;
-  }
-}
-
-.flat {
-  &.orange {
-    background-color: transparent;
-    color: #ef6c00;
-  }
-  &.black {
-    background-color: transparent;
-    color: black;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.1) !important;
-    }
-  }
-  &.white {
-    background-color: transparent;
-    color: white;
-  }
-}
 .paralax {
   background-position: center center;
   background-size: cover;
@@ -97,6 +108,10 @@
 .limit-full-height {
   max-height: 100vh;
 }
+
+
+// Effects
+/////////////
 
 .hover-scalable {
   transition: 0.25s ease-in;

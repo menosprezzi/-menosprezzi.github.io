@@ -1,12 +1,3 @@
-body.svgclippaths .black-clip-path-overlay {
-  clip: rect(0vh, 50vw, 100vw, 0vh);
-}
-
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
 .fog {
   background: url(../res/img/fog1.png);
   width: 100vw;
@@ -31,12 +22,20 @@ body {
   height: 100%;
   background: black;
   clip-path: polygon(0 0, 50% 0, 100% 100%, 50% 100%);
+  clip-path: url('#clip-shape');
 
   .header-bottom, .header-title, .brand {
     color: white;
   }
   .header-title h1:after {
     border-color: white;
+  }
+
+  .overlay-inner {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -77,13 +76,13 @@ body {
 
 .header-bottom {
   text-align: center;
-  color: white;
+  color: $color-black;
 }
 .header-title {
   margin-top: 25vh;
   margin-bottom: -15px;
   height: 50%;
-  color: white;
+  color: $color-black;
   text-align: center;
 
   h1 {
@@ -94,7 +93,7 @@ body {
     &:after {
       content: ' ';
       margin-left: 5px;
-      border: 2px solid white;
+      border: 2px solid $color-black;
 
       animation-name: cursor-light;
       animation-duration: 1.0s;
@@ -125,7 +124,7 @@ body {
 }
 .brand {
   font-size: 18px;
-  color: white;
+  color: $color-black;
   line-height: 20px;
   margin: 0px 10px;
   width: 50px;
@@ -224,7 +223,7 @@ body {
 .terminal-wrapper {
   background-color: black;
   position: relative;
-  min-height: 100%;
+  min-height: 100vh;
   &:before {
     content: ' ';
     position: absolute;
@@ -275,20 +274,43 @@ body {
   .black-clip-path-overlay {
     display: block;
   }
-  .header-bottom,
-  .header-title,
-  .brand {
-    color: black;
-  }
-  #button_descubra {
-    border-color: black;
-  }
-  .header-title h1:after {
-    border-color: black;
+  body.compatibility-mode {
+    .fog {
+      z-index: -1;
+    }
+    .header-inner {
+      height: 100vh;
+      background-image: url(../res/img/black-overlay.svg);
+      background-size: 100vw 100vh;
+
+      #header_content {
+        mix-blend-mode: difference;
+      }
+      .header-title h1:after,
+      #button_descubra {
+        border-color: white;
+      }
+      .header-bottom,
+      .header-title,
+      .brand,
+      #icon_button_descubra,
+      #button_descubra {
+        color: white;
+      }
+    }
   }
 }
 @media only screen and (min-width: 75em) {
   .container {
     padding: 35px 100px;
+  }
+}
+
+// Compatibility Mode
+////////////////////////
+
+body.compatibility-mode {
+  .black-clip-path-overlay {
+    display: none;
   }
 }

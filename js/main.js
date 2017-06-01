@@ -81,6 +81,8 @@
         initScreenAnimations();
         initData();
         initHandlers();
+
+        if (css_browser_selector(navigator.userAgent).indexOf('ie') != -1) $('body').addClass('compatibility-mode');
     }
 
     main();
