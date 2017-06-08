@@ -40,11 +40,10 @@
                     var color = colorThief.getColor($(slide).find('img')[0]);
                     COLORS_SLIDES.push('rgb('+(color[0]-50)+','+(color[1]-50)+','+(color[2]-50)+')');
                 }
+                swiperPortfolioContainer.css('background-color', COLORS_SLIDES[swiper.realIndex]);
             },
             onSlideChangeStart: function (swiper) {
-                setTimeout(function(){
-                    swiperPortfolioContainer.css('background-color', COLORS_SLIDES[swiper.realIndex]);
-                }, 0);
+                swiperPortfolioContainer.css('background-color', COLORS_SLIDES[swiper.realIndex]);
             }
         });
     }
