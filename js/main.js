@@ -34,6 +34,9 @@
 
         var swiperPortfolioContainer = $('#portfolio_container');
         var swiperPortfolio = new Swiper ('.swiper-container', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+
             onInit: function (swiper) {
                 for (var index in swiper.slides) {
                     var slide = swiper.slides[index];
