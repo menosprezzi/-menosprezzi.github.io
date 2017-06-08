@@ -16,6 +16,7 @@ $color-white: white;
 $color-glass: rgba(255, 255, 255, 0.1);
 $color-dark-glass: rgba(0, 0, 0, 0.1);
 $color-paper: #fff8e1;
+$color-lilac: #9b94cf;
 $color-dark-grey: #263238;
 
 .glass {
@@ -33,6 +34,10 @@ $color-dark-grey: #263238;
 .paper {
   background-color: $color-paper;
   color: $color-dark-grey;
+}
+.lilac {
+  background-color: $color-lilac;
+  color: $color-black;
 }
 
 
@@ -55,10 +60,14 @@ $color-dark-grey: #263238;
 
 
 .button, .icon-button {
+  transition: transform 0.25s ease-in;
   padding: 10px 20px;
   border-radius: 50px;
   margin: 2px 5px;
 
+  &:active {
+    transform: scale(0.9);
+  }
   &.outline {
     background: transparent;
     &.white {
@@ -97,13 +106,14 @@ $color-dark-grey: #263238;
 }
 
 .background-canvas {
-  z-index: -1;
   position: absolute;
   opacity: 0.5;
 }
-
+.z-index1 {
+  z-index: 1;
+}
 .full-height {
-  height: 100vh;
+  min-height: 100vh;
 }
 .limit-full-height {
   max-height: 100vh;

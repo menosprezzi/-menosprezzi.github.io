@@ -24,7 +24,7 @@
     };
 
     $.directives.push(function terminal() {
-        $('.terminal').terminal();
+        $('.terminal.compile').terminal();
     });
 
 })();

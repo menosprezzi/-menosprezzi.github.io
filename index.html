@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -77,8 +78,10 @@
             </div>
         </div>
     </div>
-    <section class="full-height paper" id="about">
+
+    <div class="paper">
         <canvas id="lego-anm" class="background-canvas"></canvas>
+    <section class="full-height" id="about">
         <div class="row no-gutter">
             <div class="col-md-6 col-xs-12">
                 <h1>Sobre</h1>
@@ -95,10 +98,52 @@
 
             </div>
             <div class="col-xs-12 col-md-6">
-                <div class="terminal-wrapper row middle-md">
+                <div class="terminal-wrapper pointer-left row middle-md">
                     <div class="terminal compile" data-archive="res/strings/about.txt">
                         {{strings.about}}
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="show-md z-index1">
+        <div class="mid-right-clip-path"></div>
+    </section>
+    </div>
+
+    <section class="full-height" id="portfolio">
+        <div class="row no-gutter">
+            <div class="col-md-6 show-md">
+                <div class="terminal-wrapper pointer-right row middle-md">
+                    <div class="terminal">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 pos-clip-path lilac" id="portfolio_container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="res/img/portfolio/clipit1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="res/img/portfolio/androino1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="res/img/portfolio/hercab1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="res/img/portfolio/breadsy1.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="res/img/portfolio/flappy1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="res/img/portfolio/material.png">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-black"></div>
+                    <div class="swiper-button-prev swiper-button-black"></div>
                 </div>
             </div>
         </div>
@@ -115,7 +160,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="js/color-thief.min.js"></script>
 
     <script src="js/utils.js"></script>
     <script src="js/scroll-to.js"></script>

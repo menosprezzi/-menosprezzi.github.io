@@ -1,6 +1,8 @@
 (function () {
     var server = location.origin;
+    var COLORS_SLIDES = [];
     var screen = new OnScreen();
+    var colorThief = new ColorThief();
 
     var homeMenu = {
         isOpened: false,
@@ -27,6 +29,23 @@
             homeMenu.toggle();
             if(homeMenu.isOpened) $('#menu_trigger i').removeClass('ion-navicon').addClass('ion-android-close');
             else $('#menu_trigger i').removeClass('ion-android-close').addClass('ion-navicon');
+        });
+
+
+        var swiperPortfolioContainer = $('#portfolio_container');
+        var swiperPortfolio = new Swiper ('.swiper-container', {
+            onInit: function (swiper) {
+                for (var index in swiper.slides) {
+                    var slide = swiper.slides[index];
+                    var color = colorThief.getColor($(slide).find('img')[0]);
+                    COLORS_SLIDES.push('rgb('+(color[0]-50)+','+(color[1]-50)+','+(color[2]-50)+')');
+                }
+            },
+            onSlideChangeStart: function (swiper) {
+                setTimeout(function(){
+                    swiperPortfolioContainer.css('background-color', COLORS_SLIDES[swiper.realIndex]);
+                }, 0);
+            }
         });
     }
 
