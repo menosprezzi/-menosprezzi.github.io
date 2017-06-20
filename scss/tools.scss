@@ -57,6 +57,11 @@ $color-dark-grey: #263238;
   display: block;
 }
 
+.flex-stretch {
+  display: flex;
+  align-items: stretch;
+}
+
 
 
 .button, .icon-button {
