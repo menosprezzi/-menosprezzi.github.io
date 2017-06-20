@@ -1,8 +1,8 @@
 (function () {
     var server = location.origin;
-    var COLORS_SLIDES = [];
+    var COLORS_SLIDES = ['#1e88e5', '#008193', '#7a2bd4', '#e75d2f', '#4485bf', '#ff1a1a'];
+    var portfolio = [];
     var screen = new OnScreen();
-    var colorThief = new ColorThief();
 
     var homeMenu = {
         isOpened: false,
@@ -38,14 +38,10 @@
             prevButton: '.swiper-button-prev',
 
             onInit: function (swiper) {
-                for (var index in swiper.slides) {
-                    var slide = swiper.slides[index];
-                    var color = colorThief.getColor($(slide).find('img')[0]);
-                    COLORS_SLIDES.push('rgb('+(color[0]-50)+','+(color[1]-50)+','+(color[2]-50)+')');
-                }
                 swiperPortfolioContainer.css('background-color', COLORS_SLIDES[swiper.realIndex]);
             },
             onSlideChangeStart: function (swiper) {
+                $.scope.actualPortfolio = portfolio[swiper.realIndex];
                 swiperPortfolioContainer.css('background-color', COLORS_SLIDES[swiper.realIndex]);
             }
         });
@@ -53,6 +49,13 @@
 
     function initData() {
         $.scope.strings = {};
+        $.scope.actualPortfolio = {};
+
+        $.get(server + '/res/strings/portfolio.json')
+            .done(function (data){
+                portfolio = data;
+                $.scope.actualPortfolio = portfolio[0];
+            });
     }
 
     function initScreenAnimations() {
@@ -90,12 +93,9 @@
         });
 
         screen.on('enter', '#about', function (elt) {
-            $.get(server + '/res/strings/about.txt').then(
-                function success(res) {
-                    $.scope.strings.about = res;
-                },
-                function error(err) {
-                    console.log(err)
+            $.get(server + '/res/strings/about.txt')
+                .done(function (data) {
+                    $.scope.strings.about = data;
                 });
         });
     }

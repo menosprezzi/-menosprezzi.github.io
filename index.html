@@ -99,7 +99,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="terminal-wrapper pointer-left row middle-md">
-                    <div class="terminal compile" data-archive="res/strings/about.txt">
+                    <div id="terminal_about" class="terminal terminal-active compile" data-archive="res/strings/about.txt">
                         {{strings.about}}
                     </div>
                 </div>
@@ -115,8 +115,15 @@
     <section class="full-height" id="portfolio">
         <div class="row no-gutter">
             <div class="col-md-6 show-md">
-                <div class="terminal-wrapper pointer-right row middle-md">
-                    <div class="terminal">
+                <div class="terminal-wrapper pointer-right">
+                    <div class="container-padding">
+                        <h1 class="compile" id="portfolio_title">{{actualPortfolio.title}}</h1>
+                        <h2 class="compile" id="portfolio_subtitle">{{actualPortfolio.subtitle}}</h2>
+                    </div>
+                    <div class="row middle-md">
+                        <div class="terminal">
+                            <p class="compile" id="portfolio_description">{{actualPortfolio.description}}<p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,6 +155,9 @@
             </div>
         </div>
     </section>
+    <section class="show-md z-index1">
+        <div class="mid-left-clip-path"></div>
+    </section>
 
     <svg width="0" height="0">
         <defs>
@@ -162,7 +172,6 @@
     <script src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script src="js/color-thief.min.js"></script>
 
     <script src="js/utils.js"></script>
     <script src="js/scroll-to.js"></script>

@@ -21,7 +21,7 @@
 @custom-media --md-viewport only screen and (min-width: 64em);
 @custom-media --lg-viewport only screen and (min-width: 75em);
 
-.container-fluid, .container {
+.container-fluid, .container-padding {
   margin-right: auto;
   margin-left: auto;
 }
@@ -245,7 +245,7 @@
 }
 
 @media (min-width: 48em) {
-  .container {
+  .container-padding {
     width: var(--container-sm, 46rem);
   }
 
@@ -462,7 +462,7 @@
 }
 
 @media (min-width: 64em) {
-  .container {
+  .container-padding {
     width: var(--container-md, 61rem);
   }
 
@@ -679,7 +679,7 @@
 }
 
 @media (min-width: 75em) {
-  .container {
+  .container-padding {
     width: var(--container-lg, 71rem);
   }
 

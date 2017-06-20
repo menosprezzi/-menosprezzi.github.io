@@ -1,17 +1,16 @@
 .fog {
-  background: url(../res/img/fog1.png);
+  background: url(../res/img/fog1.png) repeat 0 0;
   width: 100vw;
   height: 100vh;
   position: absolute;
 
   transition: opacity  0.5s ease-in;
 
-  animation: fog infinite 100s linear;
+  animation: fog infinite 50s linear;
 }
 
 @keyframes fog {
-  from {background-position-x: 0;}
-  from {background-position-x: -500vw;}
+  100% {background-position-x: 100vw}
 }
 
 .black-clip-path-overlay {
@@ -69,13 +68,13 @@
   }
 }
 
-.mid-right-clip-path {
+.mid-left-clip-path, .mid-right-clip-path{
   width: 100vw;
   height: 200px;
   background: black;
-
-  clip-path: polygon(50% 0, 100% 0, 50% 100%, 0% 100%);
 }
+.mid-left-clip-path {clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);}
+.mid-right-clip-path {clip-path: polygon(50% 0, 100% 0, 50% 100%, 0% 100%);}
 
 .header {
   @include hardware-acceleration();
@@ -86,12 +85,13 @@
 
 .header-bottom {
   text-align: center;
-  color: $color-black;
+  color: black;
+  width: 100%;
+  margin-top: 15vh;
 }
 .header-title {
   margin-top: 25vh;
   margin-bottom: -15px;
-  height: 50%;
   color: $color-black;
   text-align: center;
 
@@ -141,12 +141,8 @@
   height: 50px;
 }
 
-.container {
-  padding: 5px;
-
-  h1 {
-    font-size: 60px;
-  }
+.container-padding {
+  padding: 15px;
 }
 
 .card {
@@ -163,6 +159,11 @@
       margin: auto;
     }
   }
+}
+
+section h1 {
+  font-size: 48px;
+  margin: 30px 0px;
 }
 
 
@@ -224,13 +225,13 @@ body {
     margin: auto;
   }
   .outline {
-    margin-top: -60px;
     margin-bottom: 35px;
   }
 }
 
 .terminal-wrapper {
   background-color: black;
+  color: white;
   position: relative;
   min-height: 100%;
   min-width: 100%;
@@ -280,10 +281,9 @@ body {
 
 #about h1 {
   background-image: linear-gradient(#fff8e1, rgba(255, 255, 255, 0));
-  padding: 30px;
+  margin: 0;
+  padding: 30px 15px;
   padding-bottom: 50px;
-  margin-top: 0;
-  font-size: 48px;
 }
 #me_card {
   margin: auto;
@@ -293,33 +293,37 @@ body {
 }
 
 /* RESPONSIVE */
-@media only screen and (min-width: 48em) {
-  .header-title h1 {
-    font-size: 50px !important;
-  }
+@media only screen and (min-width: 480px) {
   #me_card {
     max-width: 320px !important;
     border-radius: 3px 10px 10px 3px;
     margin-bottom: 40px;
   }
 }
+@media only screen and (min-width: 48em) {
+  .header-title h1 {
+    font-size: 50px !important;
+  }
+}
 @media only screen and (min-width: 64em) {
   .header-title h1 {
     font-size: 70px !important;
   }
-  .container, .card {
-    padding: 15px;
+  #about h1 {
+    padding: 30px;
+    padding-bottom: 50px;
   }
-  .terminal {
-    overflow: inherit;
+  .container-padding, .card {
+    padding: 30px;
   }
   .black-clip-path-overlay {
     display: block;
   }
   .pos-clip-path {
-    height: calc(100vh + 200px);
+    height: calc(100vh + 430px);
     margin-top: -200px;
-    padding: 215px 15px 15px 15px;
+    margin-bottom: -200px;
+    padding: 215px 15px 215px 15px;
   }
   body.compatibility-mode {
     .fog {
@@ -348,9 +352,7 @@ body {
   }
 }
 @media only screen and (min-width: 75em) {
-  .container {
-    padding: 35px 100px;
-  }
+
 }
 
 @media (max-width: 480px) {

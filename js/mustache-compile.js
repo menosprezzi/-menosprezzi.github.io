@@ -13,21 +13,24 @@
     
     $.compile = function () {
         var compileSections = $('.compile');
-        for (var i = 0; i < compileSections.length; i++) {
-            var elt = $(compileSections[i]);
-            if (elt.hasClass('jscompiled')) content = $.templatesCache[elt[0].id];
-            else {
-                content = elt.html();
-                $.templatesCache[elt[0].id] = content;
-                elt.addClass('jscompiled');
+        for (var i in compileSections) {
+            if (i >= 0) {
+                var content = '';
+                var elt = $(compileSections[i]);
+
+                if (elt.hasClass('jscompiled')) content = $.templatesCache[elt[0].id];
+                else {
+                    content = elt.html();
+                    Mustache.parse(content);
+                    $.templatesCache[elt[0].id] = content;
+                    elt.addClass('jscompiled');
+                }
+                var html = Mustache.render(content, $.scope); //data-scope
+                elt.html(html);
             }
-            Mustache.parse(content);
-            var html = Mustache.render(content, $.scope); //data-scope
-            elt.html(html);
-            
-            for (var i in $.directives) {
-                $.directives[i]();
-            }
+        }
+        for (var i in $.directives) {
+            $.directives[i]();
         }
     };
 

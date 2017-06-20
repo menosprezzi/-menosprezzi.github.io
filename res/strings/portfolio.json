@@ -1,0 +1,30 @@
+[
+  {
+    "title": "ClipIt",
+    "subtitle": "Trabalho de Conclusão de Curso. Patente. 2016",
+    "description": "Desenvolvido com Ionic Framework, o ClipIt, junto a um chaveiro inteligente, notifica o usuário ao perder algum objeto pessoal. Isso se deve à comunicação bluetooth de ~25 metros. Dentro deste raio, o aplicativo possibilita a procura do objeto sinalizando-o com sinais sonoros. Com o objeto perdido, o usuário pode consultar a última localização onde esteve conectado com o seu pertence."
+  },
+  {
+    "title": "Projeto Androino",
+    "subtitle": "Projeto de Pesquisa. Coordenador: Rafael C. Pinto. 2015",
+    "description": "Biblioteca de comunicação entre dispositivos Arduino e Android desenvolvida em Java. Com apenas uma 2 linhas de código é possivel enviar dados tanto via Bluetooth quanto via USB serial. Foi desenvolvida uma aplicação teste para apresentar as funcionalidades da biblioteca: uma plataforma robótica de telepresença controlada, pelo celular acoplado, via Internet."
+  },
+  {
+
+  },
+  {
+    "title": "Breadsy",
+    "subtitle": "por Disrupt Code e Rafael Leite. 2015",
+    "description": "Aplicação desenvolvida com Ionic Framework, mostra em mapa as diversas padarias da cidade (via Google Maps) cadastradas no sistema, possibilitando adicioná-las em favorito. Ao favoritar, o usuário passa a receber notificações sobre quando os produtos desta padaria estão prontos, facilitando a compra."
+  },
+  {
+    "title": "Flappy Laura",
+    "subtitle": "Jogo. Projeto Pessoal. 2014",
+    "description": "Inspirado no jogo Flappy Bird, este jogo possui a dinâmica de desviar dos obstáculos utilzando o touch. Além disso, possui itens que interferem no jogo como ataques laser para destruir os obstáculos, player 2, moedas, inimigos e fases especiais. Desenvolvido com Construct 2, possui versão Desktop, Android, Windows Phone e Web."
+  },
+  {
+    "title": "Material Walkthrough",
+    "subtitle": "Projeto Pessoal. +Filipe de Oliveira. 2016",
+    "description": "Inspirado no Material Design, o Material Walkthrough é um plugin jquery open-source que auxilia os usuários realizando explicações dos elementos da tela. Com uma chamada jQuery, o desenvolvedor consegue realizar um walktrough, personalizando cor e conteúdo."
+  }
+]
