@@ -1,12 +1,11 @@
 .fog {
+  z-index: -1;
   background: url(../res/img/fog1.png) repeat 0 0;
   width: 100vw;
   height: 100vh;
   position: absolute;
   bottom: 0px;
-
   transition: opacity  0.5s ease-in;
-
   animation: fog infinite 50s linear;
 }
 
@@ -148,10 +147,40 @@
 
 .card {
   background: white;
-  padding: 5px;
-  border-left: #2196F3 5px solid;
+  color: $color-dark-grey;
+  padding: 15px;
+
+  &.mini-card {
+    position: relative;
+    margin: 30px 15px;
+    max-width: 320px;
+    transition: 0.25s ease-in;
+    transform: scale(0.98);
+
+    &:before {
+      content: '';
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      top: 3px;
+      left: 3px;
+      outline: 3px solid white;
+      background: rgba(255, 0, 0, 0);
+      position: absolute;
+      transition: 0.25s ease-in;
+    }
+    &:hover {
+      transform: scale(1);
+      &:before {
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        top: -4px;
+        left: -4px;
+      }
+    }
+  }
 
   &.card-contact {
+    border-left: #2196F3 5px solid;
     .card-avatar, .card-content, .card-footer {
       display: block;
       text-align: center;
@@ -256,9 +285,14 @@ body {
   }
 
   .terminal {
+    max-height: 100vh;
     max-width: 512px;
     margin: auto;
   }
+}
+
+footer {
+  padding: 15px;
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -296,7 +330,6 @@ body {
 @media only screen and (min-width: 480px) {
   #me_card {
     max-width: 320px !important;
-    border-radius: 3px 10px 10px 3px;
     margin-bottom: 40px;
   }
 }
@@ -313,7 +346,7 @@ body {
     padding: 30px;
     padding-bottom: 50px;
   }
-  .container-padding, .card {
+  .container-padding, footer, .card {
     padding: 30px;
   }
   .black-clip-path-overlay {
@@ -326,9 +359,6 @@ body {
     padding: 215px 15px 215px 15px;
   }
   body.compatibility-mode {
-    .fog {
-      z-index: -1;
-    }
     .header-inner {
       height: 100vh;
       background-image: url(../res/img/black-overlay.svg);

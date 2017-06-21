@@ -39,6 +39,16 @@ $color-dark-grey: #263238;
   background-color: $color-lilac;
   color: $color-black;
 }
+.dark-gradient {
+  background: linear-gradient(black, #292929);
+  color: $color-white;
+}
+.text-red {
+    color: red;
+}
+.text-glass {
+    color: $color-glass;
+}
 
 
 .icon-sm {
@@ -56,15 +66,25 @@ $color-dark-grey: #263238;
   margin: auto;
   display: block;
 }
-
 .flex-stretch {
   display: flex;
   align-items: stretch;
 }
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-right {
+  text-align: right;
+}
+
 
 
 
 .button, .icon-button {
+  text-decoration: none;
   transition: transform 0.25s ease-in;
   padding: 10px 20px;
   border-radius: 50px;
@@ -96,6 +116,9 @@ $color-dark-grey: #263238;
     &.white {
       background-color: transparent;
       color: $color-white;
+      &:hover {
+        background-color: $color-glass !important;
+      }
     }
   }
 }
@@ -124,8 +147,14 @@ $color-dark-grey: #263238;
   max-height: 100vh;
 }
 
-.box-margin {
 
+// Responsive Tools
+//////////////////////
+
+@media only screen and (min-width: 64em) {
+  .text-md-right {
+    text-align: right;
+  }
 }
 
 

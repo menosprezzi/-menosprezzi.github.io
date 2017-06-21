@@ -10,3 +10,6 @@ section {
 a[onclick] {
   cursor: pointer;
 }
+.icon.animated:before {
+  animation: inherit;
+}
