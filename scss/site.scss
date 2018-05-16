@@ -221,7 +221,7 @@ section h1 {
   width: 100vw;
   overflow: auto;
   padding: 15px;
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   color: white;
   background-color: black;
@@ -250,7 +250,7 @@ section h1 {
 // CUSTOM
 
 body {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 }
 
 ::-webkit-scrollbar {
