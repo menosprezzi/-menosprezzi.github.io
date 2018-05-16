@@ -347,10 +347,6 @@ footer {
   padding-bottom: 50px;
 }
 
-#me_card {
-  margin: auto;
-}
-
 #portfolio_container {
   transition: background-color 0.5s ease-in;
 }
@@ -359,7 +355,6 @@ footer {
 @media only screen and (min-width: 480px) {
   #me_card {
     max-width: 320px !important;
-    margin-bottom: 40px;
   }
 }
 
