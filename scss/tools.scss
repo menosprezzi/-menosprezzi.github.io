@@ -23,65 +23,79 @@ $color-dark-grey: #263238;
   background-color: $color-glass;
   color: $color-white;
 }
+
 .black {
   background-color: $color-black;
   color: $color-white;
 }
+
 .dark-grey {
   background-color: $color-dark-grey;
   color: $color-white;
 }
+
 .paper {
   background-color: $color-paper;
   color: $color-dark-grey;
 }
+
 .lilac {
   background-color: $color-lilac;
   color: $color-black;
 }
+
 .dark-gradient {
   background: linear-gradient(black, #292929);
   color: $color-white;
 }
+
 .text-red {
-    color: red;
-}
-.text-glass {
-    color: $color-glass;
+  color: red;
 }
 
+.text-glass {
+  color: $color-glass;
+}
+
+.text-lilac {
+  color: $color-lilac;
+}
 
 .icon-sm {
   width: 32px;
   margin: 0px 7px;
   vertical-align: middle;
 }
+
 .image {
   width: 100%;
 }
+
 .rounded {
   border-radius: 50%;
 }
+
 .block-centered {
   margin: auto;
   display: block;
 }
+
 .flex-stretch {
   display: flex;
   align-items: stretch;
 }
+
 .text-center {
   text-align: center;
 }
+
 .text-justify {
   text-align: justify;
 }
+
 .text-right {
   text-align: right;
 }
-
-
-
 
 .button, .icon-button {
   text-decoration: none;
@@ -137,16 +151,18 @@ $color-dark-grey: #263238;
   position: absolute;
   opacity: 0.5;
 }
+
 .z-index1 {
   z-index: 1;
 }
+
 .full-height {
   min-height: 100vh;
 }
+
 .limit-full-height {
   max-height: 100vh;
 }
-
 
 // Responsive Tools
 //////////////////////
@@ -157,17 +173,18 @@ $color-dark-grey: #263238;
   }
 }
 
-
 // Effects
 /////////////
 
 .hover-scalable, .hover-shadow {
   transition: 0.25s ease-in;
 }
+
 .hover-scalable:hover {
   transform: scale(1.2);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
+
 .hover-shadow:hover {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }

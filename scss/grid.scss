@@ -3,16 +3,20 @@
 .row {
   margin: 0;
 }
+
 .no-gutter > * {
   padding: 0;
 }
+
 .show-only-xs {
   display: flex !important;
 }
+
 .show-only-sm, .show-only-md, .show-only-lg,
 .show-sm, .show-md, .show-lg {
   display: none;
 }
+
 @media only screen and (min-width: 48em) {
   .show-only-xs {
     display: none !important;
@@ -21,6 +25,7 @@
     display: flex !important;
   }
 }
+
 @media only screen and (min-width: 64em) {
   .show-only-sm {
     display: none !important;
@@ -29,8 +34,9 @@
     display: flex !important;
   }
 }
+
 @media only screen and (min-width: 75em) {
-  .show-only-md{
+  .show-only-md {
     display: none !important;
   }
   .show-lg, .show-only-lg {
